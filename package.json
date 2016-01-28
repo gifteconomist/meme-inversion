@@ -1,0 +1,29 @@
+{
+  "name": "meme",
+  "version": "1.0.0",
+  "description": "twitter that publishes inverted memes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gifteconomist/meme-inversion.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "grace poetzinger",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/gifteconomist/meme-inversion/issues"
+  },
+  "homepage": "https://github.com/gifteconomist/meme-inversion#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "gm": "^1.21.1",
+    "request": "^2.69.0",
+    "twitter": "^1.2.5"
+  }
+}
