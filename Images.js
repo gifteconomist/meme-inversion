@@ -13,7 +13,7 @@ Images = (function() {
 				return cb(err);
 			}
 			var buffer = new Buffer(body, 'binary');
-			gm(buffer, 'tweet.jpg').negative().toBuffer(cb)
+			gm(buffer, 'tweet.jpg').negative().resize(500, 500).toBuffer(cb)
 		});
 	};
 });

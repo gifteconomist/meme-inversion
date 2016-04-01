@@ -23,7 +23,9 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "gm": "^1.21.1",
+    "imgurnode": "0.0.1",
     "request": "^2.69.0",
+    "simple-oauth2": "^0.5.1",
     "twitter": "^1.2.5"
   }
 }

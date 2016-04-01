@@ -1,10 +1,12 @@
 require('dotenv').config();
+//handles certificate issue: [Error: UNABLE_TO_VERIFY_LEAF_SIGNATURE]
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
 var twitter = require('./Twitter');
 var images = require('./Images')
 
-// var url = 'http://cdn1-www.cattime.com/assets/uploads/gallery/25-cat-memes/Cat-meme_004.jpg'
-var url = 'http://www.becauseimacat.com/wp-content/uploads/2015/08/cat-memes7.jpg'
+
+var url = 'https://s-media-cache-ak0.pinimg.com/564x/ca/94/7f/ca947f2fc5541a3171fd2fd124ac09dc.jpg'
 
 images.invert(url, function(err, buffer){
   if (err){
@@ -14,25 +16,6 @@ images.invert(url, function(err, buffer){
   }
 });
 
-// console.log(twitter)
-// twitter.tweetMedia('Dis Cat', url, console.log)
-// twitter.tweet('Wakaka', console.log)
-// var http = require('http');
-
-// var server = http.createServer(function(req, res) {
-
-
-//   gm('qt.png').negative()
-//   .write('reqt.png', function (err) {
-//   if (!err) console.log('done');
-//   });
-//   var img = fs.readFileSync('reqt.png');
-//       res.writeHead(200, {'Content-Type': 'image/gif' });
-//       res.end(img, 'binary');
-
-// });
-// server.listen(8080);
 
 
 
-  // gm convert -negate test.png out.png
