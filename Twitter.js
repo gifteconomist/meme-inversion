@@ -2,19 +2,12 @@ var request, Tr, Twitter;
 
 request = require ('request');
 Tr = require('twitter');
- 
-// var client = new Tr({
-// 	consumer_key: process.env.TWITTER_CONSUMER_KEY,
-// 	consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-// 	access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-// 	access_token_secret: process.env.TWITTER_ACCESS_TOKEN_KEY_SECRET
-// });
 
 var client = new Tr({
-	consumer_key: 'UWqyumr035UY3qHrC5hriLGjT',
-	consumer_secret: 'xDdAovge375nlq6Rw7gK11NbmKaM3VzlwVbWNYdbu80zzXDvAk',
-	access_token_key: '4866774616-w4sWhlj91dBrsBQDBcnQdsGmJbIclpRTHhFhbcm',
-	access_token_secret: 'ki6uy6DSJK1Z4or6ly6cm5YOIM7roJATF6sG0HzN5D4Ak'
+	consumer_key: process.env.TWITTER_CONSUMER_KEY,
+	consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+	access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+	access_token_secret: process.env.TWITTER_ACCESS_TOKEN_KEY_SECRET
 });
 
 Twitter = (function() {
@@ -122,4 +115,3 @@ Twitter = (function() {
 });
 
 module.exports = new Twitter();
-
